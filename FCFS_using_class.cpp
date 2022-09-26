@@ -4,6 +4,11 @@ class processes
 {
     public:
         int pn, at, bt, ct, wt, tat;
+
+        void show_all()
+        {
+            cout<<pn<<"\t"<<at<<"\t"<<bt<<"\t"<<ct<<"\t"<<wt<<"\t"<<tat<<endl;
+        }
 };
 
 int main()
@@ -50,7 +55,6 @@ int main()
         {
             A[i].wt = 0;
         }
-        cout<<A[i].wt<<endl;
         A[i].tat = A[i].wt + A[i].bt;
         A[i].ct = A[i].tat + A[i].at;
         time = A[i].ct;
