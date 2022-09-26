@@ -19,15 +19,24 @@ int main()
     }
     brust_time[19] = 99999;
     time = 0;
-    while(count !=  limit)
+    
+    while(count <  limit)
     {
         smallest = 19;
+        bool checked = false;
         for(i = 0; i<limit;i++)
         {
             if(arrival_time[i]<=time and brust_time[i]<brust_time[smallest] and brust_time[i]>0)
             {
                 smallest = i;
+                checked = true;
             }
+        }
+        cout<<smallest<<endl;
+        if(!checked)
+        {
+            time++;
+            continue;
         }
         time += brust_time[smallest];
         completion_time[smallest] = time;
@@ -36,8 +45,8 @@ int main()
         wait_time = wait_time + completion_time[smallest]-arrival_time[smallest]-temp_brust_time[smallest];
         turn_around_time = turn_around_time + completion_time[smallest]-arrival_time[smallest];
     }
-    average_turn_around_time = (double)turn_around_time/limit;
-    average_waiting_time  = (double)wait_time/limit;
+    average_turn_around_time = (double)turn_around_time/(double)limit;
+    average_waiting_time  = (double)wait_time/(double)limit;
     cout<<"Average waiting time: "<<average_waiting_time<<endl;
     cout<<"Average turn around time: "<<average_turn_around_time<<endl;
     return 0;
