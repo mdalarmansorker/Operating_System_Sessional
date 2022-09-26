@@ -32,7 +32,6 @@ int main()
                 checked = true;
             }
         }
-        cout<<smallest<<endl;
         if(!checked)
         {
             time++;
