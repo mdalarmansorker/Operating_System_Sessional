@@ -27,7 +27,7 @@ int main()
     //insertion sort by the arrival times
     int i, j;
     processes key;
-    for(int i=1;i<n;i++)
+    for(i=1;i<n;i++)
     {
         key = A[i];
         j = i -1;
