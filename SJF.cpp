@@ -44,8 +44,8 @@ int main()
         wait_time = wait_time + completion_time[smallest]-arrival_time[smallest]-temp_brust_time[smallest];
         turn_around_time = turn_around_time + completion_time[smallest]-arrival_time[smallest];
     }
-    average_turn_around_time = (double)turn_around_time/(double)limit;
-    average_waiting_time  = (double)wait_time/(double)limit;
+    average_turn_around_time = turn_around_time/limit;
+    average_waiting_time  = wait_time/limit;
     cout<<"Average waiting time: "<<average_waiting_time<<endl;
     cout<<"Average turn around time: "<<average_turn_around_time<<endl;
     return 0;
