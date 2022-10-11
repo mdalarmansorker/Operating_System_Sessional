@@ -11,16 +11,14 @@ int main()
     cout<<"Enter details of "<<limit<<" process: "<<endl;
     for(i=0;i<limit;i++)
     {
-        cout<<"AT: \t";
-        cin>>arrival_time[i];
-        cout<<"BT: \t";
-        cin>>brust_time[i];
+        cout<<"AT\tBT"<<endl;
+        cin>>arrival_time[i]>>brust_time[i];
         temp_brust_time[i]=brust_time[i];
     }
     brust_time[19] = 99999;
     time = 0;
     
-    while(count <  limit)
+    while(count < limit)
     {
         smallest = 19;
         bool checked = false;
