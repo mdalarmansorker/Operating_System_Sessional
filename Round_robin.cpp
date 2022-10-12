@@ -58,7 +58,7 @@ int main()
         p[i].pid = i+1;
         cout<<endl;
     }
-
+    //sorting by arrival time
     sort(p,p+n,compare1);
 
     queue<int> q;
@@ -70,7 +70,8 @@ int main()
     memset(mark,0,sizeof(mark));
     mark[0] = 1;
 
-    while(completed != n) {
+    while(completed != n) 
+    {
         idx = q.front();
         q.pop();
 
