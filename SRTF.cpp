@@ -4,7 +4,7 @@ int main()
 {
     int arrival_time[20], brust_time[20], temp_brust_time[20];
     int i, smallest, count = 0, time, limit;
-    double turn_around_time = 0, ct, average_waiting_time, average_turn_around_time;
+    double turn_around_time = 0, ct, average_waiting_time, average_turn_around_time, wait_time;
     cout<<"Number of process: ";
     cin>>limit;
     cout<<"Enter details of "<<limit<<" process: "<<endl;
